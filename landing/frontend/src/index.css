@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cyan:    #00e5ff;
+  --cyan2:   #00b8d4;
+  --orange:  #ff6b00;
+  --orange2: #f59e0b;
+  --ok:      #00ffaa;
+  --warn:    #ef4444;
+  --white:   #f0ebe0;
+  --dim:     rgba(240,235,224,0.55);
+  --dimmer:  rgba(240,235,224,0.3);
+  --bg:      #060810;
+  --glass:   rgba(8,14,26,0.72);
+  --glass2:  rgba(0,229,255,0.05);
+  --border:  rgba(0,229,255,0.15);
+  --border2: rgba(255,255,255,0.07);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  font-family: 'Exo 2', sans-serif;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes logoPulse {
+  0%,100% { filter: drop-shadow(0 0 28px rgba(0,229,255,0.55)) drop-shadow(0 0 70px rgba(0,229,255,0.18)); }
+  50%     { filter: drop-shadow(0 0 44px rgba(0,229,255,0.85)) drop-shadow(0 0 100px rgba(0,229,255,0.35)); }
+}
+@keyframes scrollPulse {
+  0%,100% { opacity: 0.3; transform: scaleY(0.8); }
+  50%     { opacity: 1;   transform: scaleY(1); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.3); border-radius: 2px; }
+
+/* ── Hover helpers ── */
+button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+input:focus { border-color: var(--cyan) !important; }
