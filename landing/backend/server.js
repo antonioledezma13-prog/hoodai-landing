@@ -38,7 +38,7 @@ app.use((err, _req, res, _next) => {
 });
 
 // ── MongoDB + Start ───────────────────────────────────────────────────────────
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
